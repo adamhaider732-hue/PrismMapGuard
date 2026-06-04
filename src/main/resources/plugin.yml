@@ -1,0 +1,24 @@
+name: PrismMapGuard
+version: '1.0.0'
+main: online.prismsmp.mapguard.PrismMapGuard
+api-version: '1.21'
+description: Content moderation for ImageFrame map art on Prism SMP
+authors: [luc1d_G0]
+
+softdepend:
+  - ImageFrame
+
+commands:
+  mapguard:
+    description: PrismMapGuard admin commands
+    usage: /mapguard <log|ban|unban|stats|reload>
+    permission: mapguard.admin
+    aliases: [mg]
+
+permissions:
+  mapguard.admin:
+    description: Access to all MapGuard admin commands
+    default: op
+  mapguard.bypass:
+    description: Bypass image moderation scanning
+    default: op
