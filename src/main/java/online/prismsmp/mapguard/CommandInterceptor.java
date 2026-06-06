@@ -135,11 +135,13 @@ public class CommandInterceptor implements Listener {
         final int finalTotalCost;
         if (plugin.getConfig().getBoolean("cost.enabled", true)) {
             String materialName = plugin.getConfig().getString("cost.material", "IRON_INGOT");
+            Material parsed;
             try {
-                finalCostMaterial = Material.valueOf(materialName.toUpperCase());
+                parsed = Material.valueOf(materialName.toUpperCase());
             } catch (IllegalArgumentException e) {
-                finalCostMaterial = Material.IRON_INGOT;
+                parsed = Material.IRON_INGOT;
             }
+            finalCostMaterial = parsed;
             finalTotalCost = width * height * plugin.getConfig().getInt("cost.amount-per-map", 1);
         } else {
             finalCostMaterial = null;
