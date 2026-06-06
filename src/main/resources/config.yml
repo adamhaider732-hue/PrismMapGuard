@@ -11,33 +11,32 @@ sightengine:
   api-user: "YOUR_API_USER"
   api-secret: "YOUR_API_SECRET"
 
+# ---- MAP ART COST ----
+# Requires materials to create map art
+cost:
+  enabled: true
+  # Material name (Bukkit material names: IRON_INGOT, DIAMOND, GOLD_INGOT, etc.)
+  material: "IRON_INGOT"
+  # How many per map tile (a 3x3 image = 9 tiles = 9 x amount-per-map)
+  amount-per-map: 1
+
 # ---- MODERATION THRESHOLDS ----
 # Scores range from 0.0 to 1.0 (higher = more likely to contain)
 # Lower threshold = stricter moderation
 thresholds:
-  # Sexual content
   sexual-activity: 0.4
   sexual-display: 0.4
   erotica: 0.5
-
-  # Hate symbols (strict)
   nazi: 0.3
   supremacist: 0.3
   confederate: 0.4
   isis: 0.3
-
-  # Violence & gore
   gore: 0.5
   weapon: 0.7
-
-  # Offensive gestures
   middle-finger: 0.5
-
-  # Drugs
   recreational-drug: 0.7
 
 # ---- AUTO-BAN ----
-# Ban players from uploading after N rejections in 24 hours
 auto-ban:
   enabled: true
   rejections-before-ban: 3
